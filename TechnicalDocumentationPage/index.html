@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>CSS Basics</title>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=IBM+Plex+Mono:ital,wght@0,400;0,500;0,700;1,400;1,500&family=Poppins:wght@400;700&display=swap"
+            rel="stylesheet" />
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/base16/dracula.min.css" />
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script>
+        <script>
+            hljs.highlightAll();
+        </script>
+        <link rel="stylesheet" href="styles.css" />
+    </head>
+    <body>
+        <main id="main-doc">
+            <section id="Introduction" class="main-section">
+                <header>Introduction</header>
+                <article>
+                    <p>
+                        CSS (Cascading Style Sheets) is the code that styles web content. CSS
+                        basics walks through what you need to get started. We'll answer
+                        questions like: How do I make text red? How do I make content display
+                        at a certain location in the (webpage) layout? How do I decorate my
+                        webpage with background images and colors?
+                    </p>
+                    <p>
+                        To easily follow along with this document, setup a
+                        <a href="https://codepen.io" target="_blank"> codepen.io </a>
+                        acccount, and start a new pen.
+                    </p>
+                </article>
+            </section>
+            <section id="What_is_CSS" class="main-section">
+                <header>What is CSS?</header>
+                <article>
+                    <p>
+                        Like HTML, CSS is not a programming language. It's not a markup
+                        language either. CSS is a style sheet language. CSS is what you use to
+                        selectively style HTML elements. For example, this CSS selects
+                        paragraph text, setting the color to red:
+                    </p>
+                    <pre>
+                        <code> 
+                            p { 
+                                color: red; 
+                            } 
+                        </code>
+                    </pre>
+                    <p>If your paragraph text is red, congratulations! Your CSS is working.</p>
+                    <p>
+                        To modify multiple property values in one ruleset, write them separated
+                        by semicolons, like this:
+                    </p>
+                    <pre>
+                        <code>
+                            p { 
+                                color: red; 
+                                width: 500px; 
+                                border: 1px solid black; 
+                            }
+                        </code>
+                    </pre>
+                    <p>
+                        You can also select multiple elements and apply a single ruleset to all
+                        of them. Separate multiple selectors by commas. For example:
+                    </p>
+                    <pre>
+                        <code> 
+                            p, 
+                            li, 
+                            h1 { 
+                                color: red; 
+                            } 
+                        </code>
+                    </pre>
+                </article>
+            </section>
+            <section id="Anatomy_of_a_CSS_Ruleset" class="main-section">
+                <header>Anatomy of a CSS Ruleset</header>
+                <article>
+                    <p>
+                        Let's dissect the CSS code for red paragraph text to understand how it
+                        works:
+                    </p>
+                    <figure>
+                        <img
+                            src="https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/CSS_basics/css-declaration-small.png"
+                            alt="Anatomy of a CSS Ruleset" />
+                    </figure>
+                    <p>
+                        The whole structure is called a ruleset. (The term ruleset is often
+                        referred to as just rule.) Note the names of the individual parts:
+                    </p>
+                    <ul>
+                        <li class="list-heading">Selector</li>
+                        <ul>
+                            <li>
+                                This is the HTML element name at the start of the ruleset. It
+                                defines the element(s) to be styled. To style a different
+                                element, change the selector.
+                            </li>
+                        </ul>
+                        <li class="list-heading">Declaration</li>
+                        <ul>
+                            <li>
+                                This is a single rule like
+                                <span class="inline-code">color: red;</span>
+                                . It specifies which of the element's properties you want to
+                                style.
+                            </li>
+                        </ul>
+                        <li class="list-heading">Properties</li>
+                        <ul>
+                            <li>
+                                These are ways in which you can style an HTML element. In CSS,
+                                you choose which properties you want to affect in the rule.
+                            </li>
+                        </ul>
+                        <li class="list-heading">Property value</li>
+                        <ul>
+                            <li>
+                                To the right of the property—after the colon—there is the
+                                property value. This chooses one out of many possible
+                                appearances for a given property. (For example, there are many
+                                color values in addition to red.)
+                            </li>
+                        </ul>
+                    </ul>
+                    <p>Note the other important parts of the syntax:</p>
+                    <ul>
+                        <li>
+                            Apart from the selector, each ruleset must be wrapped in curly
+                            braces. (
+                            <span class="inline-code">{}</span>
+                            )
+                        </li>
+                        <li>
+                            Within each declaration, you must use a colon (
+                            <span class="inline-code">:</span>
+                            ) to separate the property from its value or values.
+                        </li>
+                        <li>
+                            Within each ruleset, you must use a semicolon (
+                            <span class="inline-code">;</span>
+                            ) to separate each declaration from the next one.
+                        </li>
+                    </ul>
+                </article>
+            </section>
+            <section id="All_About_Boxes" class="main-section">
+                <header>All About Boxes</header>
+                <article>
+                    <p>
+                        Something you'll notice about writing CSS: a lot of it is about boxes.
+                        This includes setting size, color, and position. Most HTML elements on
+                        your page can be thought of as boxes sitting on top of other boxes.
+                    </p>
+                    <p>
+                        CSS layout is mostly based on the box model. Each box taking up space
+                        on your page has properties like:
+                    </p>
+                    <ul>
+                        <li>
+                            <span class="inline-code">padding</span>
+                            , the space around the content. In the example below, it is the
+                            space around the paragraph text.
+                        </li>
+                        <li>
+                            <span class="inline-code">border</span>
+                            , the solid line that is just outside the padding.
+                        </li>
+                        <li>
+                            <span class="inline-code">margin</span>
+                            , the space around the outside of the border.
+                        </li>
+                    </ul>
+                </article>
+            </section>
+            <section id="CSS_Examples" class="main-section">
+                <header>CSS Examples</header>
+                <article>
+                    <pre>
+                        <code> 
+                            html { 
+                                background-color: #00539f; 
+                            } 
+                        </code>
+                    </pre>
+                    <p>This rule sets a background color for the entire page.</p>
+                    <pre>
+                        <code>
+                            body { 
+                                width: 600px; 
+                                margin: 0 auto; 
+                                background-color: #ff9500;
+                                padding: 0 20px 20px 20px; 
+                                border: 5px solid black; 
+                            }
+                        </code>
+                    </pre>
+                    <p>
+                        There are several declarations for the
+                        <span class="inline-code">body</span> element. Let's go through these
+                        line-by-line:
+                    </p>
+                    <ul>
+                        <li>
+                            <span class="inline-code">width: 600px;</span> - This forces the
+                            body to always be 600 pixels wide.
+                        </li>
+                        <li>
+                            <span class="inline-code">margin: 0 auto;</span> - When you set two
+                            values on a property like margin or padding, the first value
+                            affects the element's top and bottom side (setting it to 0 in this
+                            case); the second value affects the left and right side. (Here,
+                            auto is a special value that divides the available horizontal space
+                            evenly between left and right). You can also use one, two, three,
+                            or four values, as documented in Margin Syntax.
+                        </li>
+                        <li>
+                            <span class="inline-code">background-color: #FF9500;</span> This
+                            sets the element's background color. This project uses a reddish
+                            orange for the body background color, as opposed to dark blue for
+                            the <span class="inline-code">html</span> element. (Feel free to
+                            experiment.)
+                        </li>
+                        <li>
+                            <span class="inline-code">padding: 0 20px 20px 20px;</span> This
+                            sets four values for padding. The goal is to put some space around
+                            the content. In this example, there is no padding on the top of the
+                            body, and 20 pixels on the right, bottom and left. The values set
+                            top, right, bottom, left, in that order. As with margin, you can
+                            use one, two, three, or four values, as documented in Padding
+                            Syntax.
+                        </li>
+                        <li>
+                            <span class="inline-code">border: 5px solid black;</span> This sets
+                            values for the width, style and color of the border. In this case,
+                            it's a five-pixel–wide, solid black border, on all sides of the
+                            body.
+                        </li>
+                    </ul>
+                </article>
+            </section>
+            <section id="Reference" class="main-section">
+                <header>Reference</header>
+                <article>
+                    All documentation within this site is written by and in further detail on
+                    <a
+                        href="https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/CSS_basics">
+                        MDN
+                    </a>
+                    .
+                </article>
+            </section>
+        </main>
+    </body>
+</html>
