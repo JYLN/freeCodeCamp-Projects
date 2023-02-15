@@ -119,6 +119,7 @@ pre {
   border-radius: 0.5rem;
   padding: 0.4rem 2rem;
   white-space: normal;
+  overflow-x: auto;
 }
 
 pre code {
@@ -134,11 +135,5 @@ pre code {
 @media only screen and (max-width: 825px) {
   #navbar header {
     font-size: 1.75rem;
-  }
-}
-
-@media only screen and (max-width: 525px) {
-  code {
-    white-space: nowrap !important;
   }
 }
