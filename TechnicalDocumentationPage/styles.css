@@ -101,6 +101,11 @@ figure img {
   font-weight: 700;
 }
 
+.list-heading {
+  font-weight: bold;
+  text-decoration: underline;
+}
+
 .inline-code {
   background-color: #44475a;
   font-family: 'IBM Plex Mono', monospace;
