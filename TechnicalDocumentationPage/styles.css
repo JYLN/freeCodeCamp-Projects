@@ -110,20 +110,14 @@ figure img {
 }
 
 pre {
-  clear: both;
-  word-break: normal;
-  tab-size: 2;
-  hyphens: none;
-  position: relative;
-  overflow: hidden;
-  padding: 0;
+  background-color: #44475a;
+  border-radius: 0.5rem;
+  padding: 0.4rem 2rem;
+  white-space: normal;
 }
 
 pre code {
-  display: block;
-  max-width: 100%;
   white-space: pre;
-  text-align: center;
 }
 
 @media only screen and (max-width: 1281px) {

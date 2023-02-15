@@ -48,11 +48,13 @@
             CSS is a style sheet language. CSS is what you use to selectively style HTML
             elements. For example, this CSS selects paragraph text, setting the color to red:
           </p>
-          <pre><code>
-            p { 
-              color: red; 
-            }
-          </code></pre>
+          <pre>
+            <code>
+              p { 
+                color: red; 
+              }
+            </code>
+          </pre>
           <p>If your paragraph text is red, congratulations! Your CSS is working.</p>
           <p>
             To modify multiple property values in one ruleset, write them separated by
@@ -61,9 +63,9 @@
           <pre>
             <code>
               p { 
-                  color: red; 
-                  width: 500px; 
-                  border: 1px solid black; 
+                color: red; 
+                width: 500px; 
+                border: 1px solid black; 
               }
             </code>
           </pre>
@@ -76,7 +78,7 @@
               p, 
               li, 
               h1 { 
-                  color: red; 
+                color: red; 
               } 
             </code>
           </pre>
@@ -187,7 +189,7 @@
           <pre>
             <code> 
               html { 
-                  background-color: #00539f; 
+                background-color: #00539f; 
               } 
             </code>
           </pre>
@@ -195,11 +197,11 @@
           <pre>
             <code>
               body { 
-                  width: 600px; 
-                  margin: 0 auto; 
-                  background-color: #ff9500;
-                  padding: 0 20px 20px 20px; 
-                  border: 5px solid black; 
+                width: 600px; 
+                margin: 0 auto; 
+                background-color: #ff9500;
+                padding: 0 20px 20px 20px; 
+                border: 5px solid black; 
               }
             </code>
           </pre>
@@ -252,5 +254,14 @@
         </article>
       </section>
     </main>
+
+    <script>
+      document.querySelectorAll('pre code').forEach(el => {
+        let html = el.outerHTML;
+        let pattern = html.match(/\s*\n[\t\s]*/);
+
+        el.outerHTML = html.replace(new RegExp(pattern, 'g'), '\n');
+      });
+    </script>
   </body>
 </html>
