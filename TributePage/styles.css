@@ -1,0 +1,88 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 16px;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 3rem 1.5rem;
+  background-image: url('https://cdn.wallpapersafari.com/86/96/uaBWF8.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+#main {
+  margin: inherit;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2.5rem;
+}
+
+#tribute-info {
+  display: flex;
+  flex-flow: column;
+  flex-basis: 700px;
+}
+
+#title {
+  font-family: 'Tinos', serif;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+  font-size: 2.5rem;
+}
+
+p {
+  font-family: 'Cabin', sans-serif;
+  font-size: 1rem;
+  line-height: 1.25;
+  margin-bottom: 0.7rem;
+}
+
+#tribute-link {
+  text-decoration: none;
+  font-family: 'Tinos', serif;
+  font-size: 1.1rem;
+  width: max-content;
+}
+
+#tribute-link:hover {
+  text-decoration: underline;
+}
+
+#img-div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#image {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 0.3rem;
+}
+
+#img-caption {
+  font-family: 'Tinos', sans-serif;
+  font-size: 0.9rem;
+}
+
+@media only screen and (max-width: 936px) {
+  main {
+    flex-direction: column;
+  }
+
+  #tribute-info {
+    flex-basis: 125px;
+  }
+}

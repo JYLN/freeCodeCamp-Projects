@@ -1,0 +1,84 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,400;0,500;0,700;1,400;1,500&family=Poppins:wght@400;700&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'IBM Plex Mono', monospace;
+  color: #000;
+}
+
+.container {
+  margin: 8vh auto;
+  max-width: 65%;
+  min-width: 300px;
+  padding: 30px;
+  border: 1px solid #ccc;
+  border-radius: 12px;
+  max-height: min-content;
+}
+
+#title {
+  font-family: 'Poppins';
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#title .logo {
+  height: auto;
+  width: 8.25%;
+  vertical-align: middle;
+}
+
+hr {
+  margin: 2.25em auto;
+}
+
+#survey-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+#survey-form label {
+  margin-bottom: 0.2rem;
+}
+
+#survey-form input,
+#survey-form select,
+#survey-form fieldset,
+#survey-form textarea {
+  margin-bottom: 1.25rem;
+  border: 1px solid #ccc;
+}
+
+#survey-form input,
+#survey-form select {
+  padding: 0.45rem;
+}
+
+#survey-form #submit {
+  margin: 2rem auto;
+  padding: 1rem 2rem;
+  background-color: #fbdb51;
+  border: none;
+  border-radius: 5px;
+  outline: none;
+  width: 200px;
+  font-family: 'Poppins';
+  font-weight: 700;
+  font-size: 1rem;
+}
+
+#survey-form #submit:hover {
+  background-color: #f9cc06;
+}
+
+#survey-form #submit:focus {
+  background-color: #f9cc06;
+  border: 3px inset #fbdb51;
+}

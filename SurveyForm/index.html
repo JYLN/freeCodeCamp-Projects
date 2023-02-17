@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Visionary Support Survey</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1 id="title">
+        <img
+          src="https://media-exp1.licdn.com/dms/image/C560BAQEWdSNispq2wg/company-logo_200_200/0/1637004764859?e=2159024400&v=beta&t=icbTwHvQXhPoCqMDThuF0tccWSKIjdiqrxrOggXy4v8"
+          class="logo" />
+        Support Survey
+      </h1>
+      <p id="description">
+        Please tell us how we did! Our support standards are important to us. Your feedback is
+        paramount for teaching us how to continue supporting our services effectively. Please
+        take the time to read and answer the following questions below.
+      </p>
+      <p>
+        <strong>NOTE:</strong> Any information collected from this form is used
+        <em>ONLY</em> for updating our support procedures. We will not use this information for
+        any other internal/external processes.
+      </p>
+      <hr />
+      <form id="survey-form">
+        <label for="name" id="name-label">
+          * What is your name (or the name on your account)?
+        </label>
+        <input
+          type="text"
+          id="name"
+          name="name"
+          placeholder="First, Last Name | Business Name | Etc."
+          required />
+
+        <label for="email" id="email-label"> * What is your email? </label>
+        <input type="email" id="email" name="email" placeholder="email@example.com" required />
+
+        <label for="number" id="number-label">
+          How was your overall experience with our support specialist? (Enter a number from 1 -
+          10)
+        </label>
+        <input type="number" min="1" max="10" id="number" name="number" placeholder="8" />
+
+        <label for="dropdown"> What was your reported issue? </label>
+        <select id="dropdown">
+          <option value="">(select one)</option>
+          <option value="outage">No Internet/Outage</option>
+          <option value="degraded">Slow Speeds/Degraded Service</option>
+          <option value="receive-email">Receiving Email</option>
+          <option value="send-email">Sending Email</option>
+        </select>
+
+        <fieldset>
+          <legend>Did we resolve your issue?</legend>
+          <input id="yes" type="radio" name="resolve" value="yes" />
+          <label for="yes">Yes</label>
+          <input id="no" type="radio" name="resolve" value="no" />
+          <label for="no">No</label>
+        </fieldset>
+
+        <fieldset>
+          <legend>
+            In the future, how would you like to be contacted regarding support issues?
+          </legend>
+          <input id="email-contact" type="checkbox" value="email-contact" />
+          <label for="email-contact">Email</label>
+          <input id="phone-contact" type="checkbox" value="phone-contact" />
+          <label for="phone-contact">Phone</label>
+          <input id="portal-contact" type="checkbox" value="portal-contact" />
+          <label for="portal-contact">Online Customer Portal</label>
+        </fieldset>
+
+        <label for="comments">Additional Comments</label>
+        <textarea id="comments" rows="9"></textarea>
+
+        <input type="submit" id="submit" value="Submit" />
+      </form>
+    </div>
+  </body>
+</html>
