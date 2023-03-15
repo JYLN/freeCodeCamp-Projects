@@ -3,40 +3,58 @@
   --font-martel: Martel, serif;
 
   --color1: #d3ab9e;
-  --color2: #eac9c1;
-  --color3: #ebd8d0;
-  --color4: #fffbff;
-  --color5: #fefeff;
+  --color2: #ece3dc;
+  --color3: #ffffff;
+  --color4: #d2cec9;
+  --color5: #dac9bb;
 }
 
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  border: none;
+  outline: none;
 }
 
+/* UNIVERSAL */
 html {
   font-size: 10px;
 }
 
 body {
-  background-color: var(--color5);
+  background-color: var(--color4);
 }
 
 h1 {
   font-family: var(--font-martel);
 }
 
+h2 {
+  font-family: var(--font-karla);
+}
+
+p {
+  font-family: var(--font-martel);
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+/* HEADER */
 #header {
   display: flex;
   width: 100%;
   justify-content: space-between;
   align-items: center;
-  min-height: 7rem;
+  height: 9rem;
   padding: 1.5rem 5rem;
   position: fixed;
   top: 0;
-  background-color: var(--color4);
+  background-color: var(--color2);
+  z-index: 5;
 }
 
 .logo-container {
@@ -51,11 +69,6 @@ h1 {
 
 .logo {
   width: 5rem;
-}
-
-#header-img {
-  width: 100%;
-  height: auto;
 }
 
 #nav-bar ul {
@@ -75,14 +88,83 @@ a {
   font-size: 2rem;
   text-decoration: none;
   padding: 0.75rem 2rem;
-  border-radius: 8.5rem;
+  border-radius: 2rem;
+  transition: all 0.2s;
 }
 
 a:hover {
   background-color: var(--color1);
-  color: var(--color4);
+  color: var(--color3);
 }
 
-section {
+/* MAIN */
+main {
+  position: relative;
+  top: 9rem;
+}
+
+/* HERO */
+#hero {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 4rem;
+  background-color: var(--color2);
+  padding: 5rem 0;
+}
+
+.hero-img {
+  width: 27vw;
+}
+
+.hero-text {
+  width: 45vw;
+}
+
+.hero-text h2 {
+  font-size: 5rem;
+  letter-spacing: -0.2rem;
+  line-height: 1;
+}
+
+.hero-text p {
+  font-size: 1.8rem;
+}
+
+.form-container {
+  width: 100%;
+  margin-top: 3rem;
+}
+
+form {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+#email {
+  width: 80%;
+  padding: 1.5rem 2rem;
+  border-radius: 2rem;
+  font-family: var(--font-martel);
+}
+
+#submit {
+  font-family: var(--font-karla);
+  padding: 1.5rem 2rem;
+  border-radius: 2rem;
+  font-size: 1.75rem;
+  background-color: var(--color1);
+  color: var(--color3);
+  transition: all 0.3s ease-in-out;
+}
+
+#submit:hover {
+  cursor: pointer;
+  background-color: var(--color3);
+  color: var(--color1);
+}
+
+section:not(:first-of-type) {
   visibility: hidden;
 }
