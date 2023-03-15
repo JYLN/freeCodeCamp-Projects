@@ -30,7 +30,8 @@ h1 {
   font-family: var(--font-martel);
 }
 
-h2 {
+h2,
+h3 {
   font-family: var(--font-karla);
 }
 
@@ -41,6 +42,14 @@ p {
 img {
   width: 100%;
   height: auto;
+}
+
+section h3 {
+  font-size: 4rem;
+}
+
+section > p {
+  font-size: 2rem;
 }
 
 /* HEADER */
@@ -110,7 +119,7 @@ main {
   align-items: center;
   gap: 4rem;
   background-color: var(--color2);
-  padding: 5rem 0;
+  height: calc(100vh - 9rem);
 }
 
 .hero-img {
@@ -165,6 +174,41 @@ form {
   color: var(--color1);
 }
 
-section:not(:first-of-type) {
-  visibility: hidden;
+/* ABOUT */
+#about {
+  text-align: center;
+  padding: 5rem 0;
+  background-color: var(--color5);
+}
+
+.card-container {
+  display: flex;
+  justify-content: center;
+  gap: 3rem;
+  margin: 5rem 0;
+}
+
+.step-card {
+  min-height: 10rem;
+  flex-basis: 35rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.step-card h4 {
+  font-size: 6.75rem;
+  font-family: var(--font-martel);
+  background-color: var(--color4);
+  width: 7vw;
+  height: 7vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  margin-bottom: 2rem;
+}
+
+.step-card p {
+  font-size: 1.4rem;
 }
