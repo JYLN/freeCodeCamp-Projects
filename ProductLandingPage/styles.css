@@ -267,3 +267,23 @@ form {
   font-size: 1.6rem;
   text-align: left;
 }
+
+/* PRICING */
+#pricing {
+  background-color: var(--color1);
+}
+
+#pricing h4 {
+  font-size: 8rem;
+  font-family: var(--font-playfair);
+  margin: 4rem 0;
+}
+
+#pricing h4 .min {
+  font-size: 4rem;
+}
+
+#pricing p {
+  width: 65%;
+  margin: 0 auto;
+}
