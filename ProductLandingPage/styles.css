@@ -123,6 +123,8 @@ a:hover {
 main {
   position: absolute;
   top: 8rem;
+  width: 100%;
+  overflow: hidden;
 }
 
 /* HERO */
@@ -201,12 +203,11 @@ form {
 }
 
 .step-card {
-  min-height: 20rem;
-  flex-basis: 35rem;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  flex-basis: 35rem;
   border: 2px solid var(--color4);
   background-color: var(--white);
   border-radius: 2rem;
@@ -217,8 +218,8 @@ form {
   font-size: 7.5rem;
   font-family: serif;
   background-color: var(--color1);
-  width: 6vw;
-  height: 6vw;
+  width: 8rem;
+  height: 8rem;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -228,6 +229,11 @@ form {
 
 .step-card p {
   font-size: 1.5rem;
+}
+
+#video {
+  width: 75%;
+  height: 312px;
 }
 
 /* TESTIMONIALS */
@@ -300,4 +306,116 @@ footer {
 
 footer p {
   font-family: var(--font-mont);
+}
+
+@media only screen and (max-width: 620px) {
+  /* CSS rules for screens that are 320px or less */
+
+  section h3 {
+    font-size: 3rem; /* decrease font size for section headings */
+  }
+
+  section > p {
+    font-size: 1.5rem; /* decrease font size for section paragraphs */
+  }
+
+  section:not(:first-of-type) {
+    padding: 6rem 4rem;
+  }
+
+  #header {
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .logo-container h1 {
+    font-size: 2.25rem; /* decrease font size for logo heading */
+  }
+
+  .logo {
+    width: 2.5rem;
+  }
+
+  #nav-bar ul {
+    gap: 0.5rem;
+    margin-top: 1rem;
+  }
+
+  a {
+    font-size: 1.5rem;
+    padding: 0.5rem 1.5rem;
+  }
+
+  #hero {
+    height: 65rem;
+    flex-direction: column;
+    padding: 0 4rem;
+  }
+
+  .hero-img {
+    width: 65%;
+  }
+
+  .hero-text {
+    width: 100%;
+  }
+
+  .hero-text h2 {
+    font-size: 3rem; /* decrease font size for hero heading */
+  }
+
+  .hero-text p {
+    font-size: 1.5rem; /* decrease font size for hero text */
+  }
+
+  .form-container {
+    margin-top: 2.5rem;
+  }
+
+  form {
+    flex-direction: column;
+  }
+
+  #email {
+    width: 100%;
+  }
+
+  .card-container {
+    flex-direction: column;
+  }
+
+  .step-card {
+    flex-basis: 25rem;
+  }
+
+  #testimonials h3 {
+    margin-bottom: 2rem;
+  }
+
+  .review {
+    height: max-content;
+    padding: 2.5rem;
+  }
+
+  /* hide review images */
+  .review-img {
+    display: none;
+  }
+
+  .review p {
+    font-size: 1.4rem;
+  }
+
+  #pricing h4 {
+    width: 100%;
+    line-height: 75%;
+  }
+
+  #pricing p {
+    width: 100%;
+  }
+
+  footer {
+    text-align: center;
+  }
 }
