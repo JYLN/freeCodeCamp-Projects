@@ -1,6 +1,6 @@
 :root {
-  --font-karla: Karla, sans-serif;
-  --font-martel: Martel, serif;
+  --font-mont: Montserrat, sans-serif;
+  --font-playfair: 'Playfair Display', serif;
 
   --color1: #d3ab9e;
   --color2: #ece3dc;
@@ -26,17 +26,14 @@ body {
   background-color: var(--color4);
 }
 
-h1 {
-  font-family: var(--font-martel);
+h1,
+p {
+  font-family: var(--font-playfair);
 }
 
 h2,
 h3 {
-  font-family: var(--font-karla);
-}
-
-p {
-  font-family: var(--font-martel);
+  font-family: var(--font-mont);
 }
 
 img {
@@ -50,6 +47,14 @@ section h3 {
 
 section > p {
   font-size: 2rem;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.ital {
+  font-style: italic;
 }
 
 /* HEADER */
@@ -93,7 +98,7 @@ section > p {
 
 a {
   color: var(--color1);
-  font-family: var(--font-karla);
+  font-family: var(--font-mont);
   font-size: 2rem;
   text-decoration: none;
   padding: 0.75rem 2rem;
@@ -155,11 +160,11 @@ form {
   width: 80%;
   padding: 1.5rem 2rem;
   border-radius: 2rem;
-  font-family: var(--font-martel);
+  font-family: var(--font-playfair);
 }
 
 #submit {
-  font-family: var(--font-karla);
+  font-family: var(--font-mont);
   padding: 1.5rem 2rem;
   border-radius: 2rem;
   font-size: 1.75rem;
@@ -189,26 +194,30 @@ form {
 }
 
 .step-card {
-  min-height: 10rem;
+  min-height: 20rem;
   flex-basis: 35rem;
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
+  border: 2px solid var(--color1);
+  border-radius: 2rem;
+  padding: 1.5rem 3rem;
 }
 
 .step-card h4 {
-  font-size: 6.75rem;
-  font-family: var(--font-martel);
+  font-size: 7.5rem;
+  font-family: serif;
   background-color: var(--color4);
-  width: 7vw;
-  height: 7vw;
+  width: 6vw;
+  height: 6vw;
   display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
   border-radius: 50%;
   margin-bottom: 2rem;
 }
 
 .step-card p {
-  font-size: 1.4rem;
+  font-size: 1.5rem;
 }
