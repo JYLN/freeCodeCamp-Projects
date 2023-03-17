@@ -158,3 +158,55 @@ footer {
   color: var(--color-background);
   font-size: 4.5rem;
 }
+
+@media only screen and (max-width: 1219px) {
+  figure {
+    display: none;
+    visibility: hidden;
+  }
+
+  #text-section {
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 830px) {
+  #intro h1 {
+    font-size: 8rem;
+  }
+
+  #intro p {
+    font-size: 2rem;
+  }
+
+  #projects h2 {
+    font-size: 2.75rem;
+  }
+
+  footer {
+    gap: 2.25rem;
+  }
+}
+
+@media only screen and (max-width: 650px) {
+  #intro h1 {
+    font-size: 6rem;
+  }
+
+  #intro p {
+    font-size: 1.6rem;
+  }
+
+  #projects h2 {
+    font-size: 2rem;
+  }
+
+  .btn {
+    width: 100%;
+  }
+
+  footer {
+    font-size: 3rem;
+    gap: 0.5rem;
+  }
+}
