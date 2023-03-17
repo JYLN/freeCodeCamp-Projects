@@ -75,7 +75,7 @@ hr {
 
 /* LANDING SECTION */
 main {
-  height: 100vh;
+  height: calc(100vh - 8rem);
   width: 80%;
   margin: auto;
   display: flex;
@@ -140,4 +140,19 @@ figure {
   background: linear-gradient(140deg, var(--color-pink), var(--color-purple));
   padding: 5rem 6rem;
   border-radius: 5rem;
+}
+
+/* FOOTER */
+footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: 8rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;
+  background: linear-gradient(to right, var(--color-yellow), var(--color-orange));
+  color: var(--color-background);
+  font-size: 4.5rem;
 }
