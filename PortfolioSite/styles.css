@@ -1,0 +1,15 @@
+:root {
+  --font-poppins: Poppins, sans-serif;
+  --font-jetmono: 'Jetbrains Mono', monospace;
+
+  /* Dracula Color Scheme */
+  --color-background: #282a36;
+  --color-white: #f8f8f2;
+  --color-cyan: #8be9fd;
+  --color-green: #50fa7b;
+  --color-orange: #ffb86c;
+  --color-pink: #ff79c6;
+  --color-purple: #bd93f9;
+  --color-red: #ff5555;
+  --color-yellow: #f1fa8c;
+}
