@@ -109,6 +109,26 @@ main {
   background: linear-gradient(to right, var(--color-pink), var(--color-purple));
   padding: 1.15rem 0;
   border-radius: 4rem;
+  z-index: 1;
+  position: relative;
+}
+
+.btn::before {
+  position: absolute;
+  content: '';
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: linear-gradient(var(--color-purple), var(--color-purple));
+  border-radius: 4rem;
+  z-index: -1;
+  transition: opacity 0.2s ease-in-out;
+  opacity: 0;
+}
+
+.btn:hover::before {
+  opacity: 1;
 }
 
 figure {
