@@ -86,7 +86,7 @@ main {
 }
 
 #text-section {
-  width: 65%;
+  width: 60%;
 }
 
 #intro h1 {
@@ -94,6 +94,8 @@ main {
   background: linear-gradient(to right, var(--color-cyan), var(--color-green));
   background-clip: text;
   color: transparent;
+  line-height: 1.05;
+  margin-bottom: 1.75rem;
 }
 
 #intro p {
@@ -136,7 +138,7 @@ main {
 }
 
 figure {
-  width: 35%;
+  width: 40%;
   background: linear-gradient(140deg, var(--color-pink), var(--color-purple));
   padding: 5rem 6rem;
   border-radius: 5rem;
