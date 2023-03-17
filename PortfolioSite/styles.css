@@ -1,6 +1,6 @@
 :root {
   --font-poppins: Poppins, sans-serif;
-  --font-jetmono: 'Jetbrains Mono', monospace;
+  --font-jetmono: 'JetBrains Mono', monospace;
 
   /* Dracula Color Scheme */
   --color-background: #282a36;
@@ -14,6 +14,7 @@
   --color-yellow: #f1fa8c;
 }
 
+/* UNIVERSAL */
 * {
   box-sizing: border-box;
   margin: 0;
@@ -26,6 +27,31 @@ html {
   font-size: 62.5%;
 }
 
+img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+#welcome-section {
+  background-color: var(--color-background);
+  height: 100vh;
+}
+
+/* UTILITY */
+.text-poppins {
+  font-family: var(--font-poppins);
+}
+
+.text-jetmono {
+  font-family: var(--font-jetmono);
+}
+
+.text-bold {
+  font-weight: bold;
+}
+
+/* NAVBAR */
 #navbar {
   position: fixed;
   right: 0;
@@ -36,9 +62,4 @@ html {
 #navbar a {
   color: var(--color-white);
   text-decoration: none;
-}
-
-#welcome-section {
-  background-color: var(--color-background);
-  height: 100vh;
 }
