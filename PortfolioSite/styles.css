@@ -85,6 +85,10 @@ main {
   color: var(--color-white);
 }
 
+#text-section {
+  width: 65%;
+}
+
 #intro h1 {
   font-size: 12rem;
   background: linear-gradient(to right, var(--color-cyan), var(--color-green));
